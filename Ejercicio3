@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string texto;
+    getline(cin, texto);
+
+    bool inicio = true;
+    for (auto &c : texto) {
+        if (isspace(c)) inicio = true;
+        else if (inicio) {
+            c = toupper(c);
+            inicio = false;
+        }
+    }
+    cout << texto;
+}
