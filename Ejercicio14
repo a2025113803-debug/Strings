@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+char codificarChar(char c, int n) {
+    if (isalpha(c)) {
+        char base = isupper(c) ? 'A' : 'a';
+        return base + (c - base + n) % 26;
+    }
+    return c;
+}
+
+string Codifica(string texto, int n) {
+    string r = "";
+    for (char c : texto)
+        r += codificarChar(c, n);
+    return r;
+}
+
+int main() {
+    cout << Codifica("hola, mundo", 3);
+}
