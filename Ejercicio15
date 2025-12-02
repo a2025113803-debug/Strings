@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+bool EsPalindromo(string cad) {
+    string c = cad;
+    transform(c.begin(), c.end(), c.begin(), ::tolower);
+    string inv = string(c.rbegin(), c.rend());
+    return c == inv;
+}
+
+int main() {
+    cout << (EsPalindromo("hola") ? "true" : "false") << endl;
+    cout << (EsPalindromo("ana") ? "true" : "false");
+}
