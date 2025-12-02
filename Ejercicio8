@@ -1,0 +1,14 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string palabra, resultado = "";
+    while (true) {
+        getline(cin, palabra);
+        if (palabra == "") break;
+        if (resultado != "") resultado += " ";
+        resultado += palabra;
+    }
+    cout << resultado;
+}
