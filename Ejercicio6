@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool esVocal(char c) {
+    string v = "aeiouAEIOUáéíóúÁÉÍÓÚ";
+    return v.find(c) != string::npos;
+}
+
+int main() {
+    string texto, res;
+    getline(cin, texto);
+
+    for (char c : texto)
+        if (!esVocal(c)) res += c;
+
+    cout << res;
+}
