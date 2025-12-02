@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string SubCadena(string cad, int n, int p) {
+    return cad.substr(p, n);
+}
+
+int main() {
+    cout << SubCadena("hoooola", 5, 3);
+}
